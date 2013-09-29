@@ -1,0 +1,374 @@
+html {
+  height: 100%;
+  color: #000;
+  background: #fff;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+  font-style: inherit;
+  font-weight: inherit;
+}
+del,
+ins {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: '';
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+sup {
+  vertical-align: baseline;
+}
+sub {
+  vertical-align: baseline;
+}
+legend {
+  color: #000;
+}
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+input,
+button,
+textarea,
+select {
+  *font-size: 100%;
+}
+button.reset {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  line-height: inherit;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  color: #000;
+}
+::-moz-any-link:focus {
+  outline: none;
+}
+::selection {
+  color: #fff;
+  background: #81d3e8;
+}
+::-moz-selection {
+  color: #fff;
+  background: #81d3e8;
+}
+.col {
+  width: 50%;
+  padding: 2% 10% 0% 10%;
+  font-family: Lato, arial, sans-serif;
+}
+.col img {
+  text-align: center;
+  max-width: 400px;
+}
+.col p {
+  font-size: 18px;
+  line-height: 23px;
+  text-indent: 20px;
+  margin: 0;
+  max-width: 400px;
+}
+.col li {
+  font-size: 18px;
+  line-height: 23px;
+  max-width: 400px;
+}
+.col h2 {
+  margin: 100px 0;
+}
+.col h2:first-child {
+  margin-top: 0;
+}
+.col h2,
+.col .back {
+  font-size: 13px;
+  margin-bottom: 100px;
+  margin-left: -50px;
+}
+#left {
+  position: fixed;
+  z-index: 1;
+  overflow-y: auto;
+  overflow-x: none;
+  -webkit-overflow-scrolling: touch;
+  float: left;
+}
+#left a {
+  color: #000;
+  padding: 0 2px 0 0;
+}
+#left a:active {
+  color: #666;
+}
+#left a img {
+  border: 0;
+}
+#left img {
+  margin: 0 0 7px 0;
+}
+#left p img {
+  margin-left: -20px;
+}
+#left ul {
+  margin: 100px 0;
+}
+#left li:first-child {
+  margin: 0 0 7px 0px;
+  text-indent: 20px;
+}
+#right {
+  float: right;
+}
+#nav {
+  padding: 1px 0;
+  margin: 100px 0 100px 0;
+  text-align: center;
+  overflow: hidden;
+  font-size: 30px;
+}
+#nav a {
+  text-decoration: none;
+}
+#pagination {
+  position: fixed;
+  right: 5%;
+  bottom: 105px;
+  font-size: 16px;
+  font-family: arial, lato;
+}
+#prev {
+  float: left;
+  width: 50%;
+}
+#next {
+  float: right;
+  width: 50%;
+}
+#pagination {
+  position: fixed;
+  right: 5%;
+  bottom: 105px;
+  font-size: 16px;
+  font-family: Arial, lato;
+}
+#images li {
+  margin: 0 auto 50px auto;
+}
+#images li a {
+  display: block;
+}
+#images li img {
+  display: block;
+  border: 3px solid transparent;
+}
+#images li img:hover {
+  border: 3px solid #ccc;
+}
+#images p {
+  font-size: 13px;
+  text-indent: 3px;
+}
+#logo {
+  position: fixed;
+  z-index: 2;
+  background: url("i/gifotomat.png") no-repeat;
+  top: 50%;
+  margin-top: -71px;
+  left: 50%;
+  margin-left: -85px;
+  width: 150px;
+}
+#logo a {
+  overflow: hidden;
+  display: block;
+  height: 142px;
+  text-indent: -9999px;
+}
+.single .col {
+  width: auto;
+}
+.single .col p {
+  text-indent: 0;
+}
+.single .imgbox {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.single .imgbox img {
+  width: 400px;
+}
+.single .urlbox {
+  display: block;
+  font-size: 13px;
+  padding: 3px 3px;
+  text-align: center;
+  background: #eee;
+  margin: 35px auto 60px auto;
+  line-height: 17px;
+  width: 200px;
+  border: 0;
+}
+.p404 {
+  height: 100%;
+}
+.p404 .backimg {
+  position: fixed;
+  right: 8%;
+  bottom: 10%;
+}
+.p404 .col {
+  width: auto;
+}
+/* iPads (portrait and landscape) ----------- */
+@media screen and (max-width: 767px) {
+  #left,
+  #right {
+    float: none;
+    width: auto;
+    padding: 2% 0 0 3%;
+  }
+  #left h2,
+  #right h2 {
+    margin-left: 0;
+  }
+  #left p,
+  #right p,
+  #left li,
+  #right li {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  #left img,
+  #right img {
+    max-width: 300px;
+    height: auto;
+  }
+  #left {
+    position: static;
+    margin-top: 100px;
+  }
+  #left li:first-child {
+    margin: 0 auto 7px auto;
+  }
+  #logo {
+    background: url("i/gifotomat-small.png") no-repeat;
+    position: absolute;
+    margin: 0;
+    top: 20px;
+    left: auto;
+    right: 20px;
+  }
+  body.paginated #left {
+    display: none;
+  }
+}
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+  .col p {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .col img {
+    width: 200px;
+    height: auto;
+  }
+  #logo {
+    background: url("i/gifotomat-small.png") no-repeat;
+    top: 50%;
+    margin-top: -52px;
+    left: 50%;
+    margin-left: -55px;
+    width: 110px;
+    height: 104px;
+  }
+}
