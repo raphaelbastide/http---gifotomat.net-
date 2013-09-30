@@ -1,7 +1,8 @@
 (function(){
-// test
-  var $window = $(window),
-      $col = $('#left');
+
+  var $window = $(window);
+  var $col = $('#left');
+
   $(function(){
     $window.resize(function() {
       if ($window.width() > 768){
@@ -15,11 +16,10 @@
     var tpl = $('#tpl-image').html(),
         $images = $('#images'),
         $nav = $('#nav'),
-        $col = $('#right'),
-        load;
+        $col = $('#right');
 
     // Ajax request
-    load = function(state) {
+    var load = function(state) {
       $.getJSON(state.ajaxUrl, function(data) {
         var html = '';
         for (var i=0; i < data.gifs.length; i++) {
