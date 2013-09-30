@@ -20,10 +20,10 @@ if ($p['last'] != 1) {
 	$pagination_html .= "\t\t\t".'<div id="pagination">'. $p['current'] .' / '. $p['last'] .'</div>'."\n";
 }
 if ($p['previous'] && $p['current'] != 1) {
-	$pagination_html .= "\t\t\t".'<div id="prev"><a href="'. (($p['previous'] == 1)? '/' : '/p/'.$p['previous']) .'" title="Page précédente">⇠</a></div>'."\n";
+	$pagination_html .= "\t\t\t".'<div id="prev"><a href="'. url_to(($p['previous'] == 1)? '' : 'p/'.$p['previous']) .'" title="'.translate('previous page').'">⇠</a></div>'."\n";
 }
 if ($p['next'] && $p['next'] != 1 && $p['current'] != $p['last']) {
-	$pagination_html .= "\t\t\t".'<div id="next"><a href="/p/'. $p['next'] .'" title="Page suivante">⇢</a></div>'."\n";
+	$pagination_html .= "\t\t\t".'<div id="next"><a href="'. url_to('p/'.$p['next']) .'" title="'.translate('next page').'">⇢</a></div>'."\n";
 }
 
 $body_classes = ($page > 1)? 'paginated' : '';
@@ -40,14 +40,14 @@ if ($route['json']) {
 
 ?>
 <?php require __DIR__ . '/header.php' ?>
-
 	<h1 id="logo">
-		<a href="<?php echo BASE_URL ?>">
+		<a href="<?= url_to('') ?>">
 			Gifotomat
 		</a>
 	</h1>
 	<div id="left" class="col">
-		<?php echo Markdown(file_get_contents(GIFS_DIR . '/_infos.md')) ?>
+		<?php $infos_file_prefix = $route['lang_prefix']? '-'.$route['lang'] : ''; ?>
+		<?= Markdown(file_get_contents(GIFS_DIR . "/_infos${infos_file_prefix}.md")) ?>
 	</div>
 	<div id="right" class="col">
 		<h2>Compositions</h2>
@@ -55,28 +55,28 @@ if ($route['json']) {
 <?php foreach($gifs as $gif): ?>
 <?php if(in_array(pathinfo($gif, PATHINFO_EXTENSION), array('gif'))):  ?>
 			<li>
-				<a href="<?php echo BASE_URL . substr($gif, 0, -4) ?>"><img src="<?php echo BASE_URL . 'gifs/' . $gif ?>" width="400" height="480" alt=""></a>
-				<p><?php echo $gif ?></p>
+				<a href="<?= url_to(substr($gif, 0, -4)) ?>"><img src="<?= BASE_URL . 'gifs/' . $gif ?>" width="400" height="480" alt=""></a>
+				<p><?= $gif ?></p>
 			</li>
 <?php endif; ?>
 <?php endforeach; ?>
 		</ul>
 		<div id="nav">
-<?php echo $pagination_html ?>
+<?= $pagination_html ?>
 		</div>
 	</div>
 	<script type="text/x-template" id="tpl-image">
 		<li>
-			<a href="<?php echo BASE_URL ?>{path}"><img src="<?php echo BASE_URL . 'gifs/' ?>{gif}" width="400" height="480" alt=""></a>
+			<a href="<?= BASE_URL ?>{path}"><img src="<?= BASE_URL . 'gifs/' ?>{gif}" width="400" height="480" alt=""></a>
 			<p>{gif}</p>
 		</li>
 	</script>
 	<script type="text/x-template" id="tpl-image">
 		<li>
-			<a href="<?php echo BASE_URL ?>{path}"><img src="<?php echo BASE_URL . 'gifs/' ?>{gif}" width="400" height="480" alt=""></a>
+			<a href="<?= BASE_URL ?>{path}"><img src="<?= BASE_URL . 'gifs/' ?>{gif}" width="400" height="480" alt=""></a>
 			<p>{gif}</p>
 		</li>
 	</script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 	<script src="/main.js"></script>
 <?php require __DIR__ . '/footer.php' ?>

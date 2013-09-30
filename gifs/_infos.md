@@ -1,4 +1,4 @@
-## Installation
+## Installation (EN)
 
 <img src="/gifs/_cabine.jpg" width="400" height="480" alt="The Gifotomat’s cabin">
 
