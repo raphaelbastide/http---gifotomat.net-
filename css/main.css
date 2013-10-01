@@ -188,7 +188,7 @@ a[href] {
 #left a {
   color: #000;
 }
-#left a:active {
+#left a[href]:active {
   color: #666;
 }
 #left a img {
