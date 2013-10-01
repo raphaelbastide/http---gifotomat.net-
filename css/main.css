@@ -185,16 +185,16 @@ a[href] {
   -webkit-overflow-scrolling: touch;
   float: left;
 }
-#left a {
+a[href] {
   color: #000;
 }
-#left a[href]:active {
+a[href]:active {
   color: #666;
 }
-#left a img {
+a[href] img {
   border: 0;
 }
-#left .langpicker {
+.langpicker {
   font-size: 11px;
   position: absolute;
   text-indent: 0;
@@ -202,16 +202,16 @@ a[href] {
   top: 36px;
   word-spacing: 10px;
 }
-#left img {
+img {
   margin: 0 0 7px 0;
 }
-#left p img {
+p img {
   margin-left: -20px;
 }
-#left ul {
+ul {
   margin: 100px 0;
 }
-#left li:first-child {
+li:first-child {
   margin: 0 0 7px 0px;
   text-indent: 20px;
 }
