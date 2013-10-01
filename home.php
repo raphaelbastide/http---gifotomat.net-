@@ -46,6 +46,10 @@ if ($route['json']) {
 		</a>
 	</h1>
 	<div id="left" class="col">
+	  <p class="langpicker">
+	    <a class="fr" title="Passer en langue Française" href="/fr">FR</a>
+	    <a class="en" title="Switch to English" href="/">ENG</a>
+	  </p>
 		<?php $infos_file_prefix = $route['lang_prefix']? '-'.$route['lang'] : ''; ?>
 		<?= Markdown(file_get_contents(GIFS_DIR . "/_infos${infos_file_prefix}.md")) ?>
 	</div>
