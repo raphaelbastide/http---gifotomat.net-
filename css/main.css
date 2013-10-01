@@ -185,33 +185,33 @@ a[href] {
   -webkit-overflow-scrolling: touch;
   float: left;
 }
-a[href] {
+#left a[href] {
   color: #000;
 }
-a[href]:active {
+#left a[href]:active {
   color: #666;
 }
-a[href] img {
+#left a[href] img {
   border: 0;
 }
-.langpicker {
-  font-size: 11px;
+#left .langpicker {
   position: absolute;
-  text-indent: 0;
   right: 100px;
   top: 36px;
+  font-size: 11px;
+  text-indent: 0;
   word-spacing: 10px;
 }
-img {
+#left img {
   margin: 0 0 7px 0;
 }
-p img {
+#left p img {
   margin-left: -20px;
 }
-ul {
+#left ul {
   margin: 100px 0;
 }
-li:first-child {
+#left li:first-child {
   margin: 0 0 7px 0px;
   text-indent: 20px;
 }
@@ -356,17 +356,17 @@ li:first-child {
     position: static;
     margin: 0 0 20px 0;
   }
-}
-#logo {
-  background: url("i/gifotomat-small.png") no-repeat;
-  position: absolute;
-  margin: 0;
-  top: 20px;
-  left: auto;
-  right: 20px;
-}
-body.paginated #left {
-  display: none;
+  #logo {
+    background: url("i/gifotomat-small.png") no-repeat;
+    position: absolute;
+    margin: 0;
+    top: 20px;
+    left: auto;
+    right: 20px;
+  }
+  body.paginated #left {
+    display: none;
+  }
 }
 @media screen and (min-width : 768px) and (max-width : 1024px) {
   .col p {
