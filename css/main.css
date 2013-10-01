@@ -166,8 +166,9 @@ a[href] {
   max-width: 400px;
 }
 .col h2 {
-  margin: 0 0 100px 0;
+  margin: 100px 0 100px 0;
 }
+.col .content h2:first-child,
 .col h2:first-child {
   margin-top: 0;
 }

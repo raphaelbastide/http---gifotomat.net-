@@ -46,23 +46,25 @@ if ($route['json']) {
 		</a>
 	</h1>
 	<div id="left" class="col">
-	<?php
-	function lang_link($lang, $label, $title) {
-		global $route;
-		$lang_url = "/$lang";
-		if ($lang === 'en') $lang_url = '/';
-		$href_attr = ' href="'.$lang_url.'"';
-		if ($lang === $route['lang']) $href_attr = '';
-		return <<<EOT
-			<a$href_attr lang="$lang" title="$title">$label</a>
+  <?php
+  function lang_link($lang, $label, $title) {
+    global $route;
+    $lang_url = "/$lang";
+    if ($lang === 'en') $lang_url = '/';
+    $href_attr = ' href="'.$lang_url.'"';
+    if ($lang === $route['lang']) $href_attr = '';
+    return <<<EOT
+	    <a$href_attr lang="$lang" title="$title">$label</a>
 EOT;
-	} ?>
-		<p class="langpicker">
-			<?= lang_link('fr', 'FR', 'Passer en langue Française') ?>
-			<?= lang_link('en', 'ENG', 'Switch to English') ?>
-		</p>
-		<?php $infos_file_prefix = $route['lang_prefix']? '-'.$route['lang'] : ''; ?>
-		<?= Markdown(file_get_contents(GIFS_DIR . "/_infos${infos_file_prefix}.md")) ?>
+  } ?>
+    <p class="langpicker">
+	    <?= lang_link('fr', 'FR', 'Passer en langue Française') ?>
+	    <?= lang_link('en', 'ENG', 'Switch to English') ?>
+    </p>
+  	<div class="content">
+      <?php $infos_file_prefix = $route['lang_prefix']? '-'.$route['lang'] : ''; ?>
+      <?= Markdown(file_get_contents(GIFS_DIR . "/_infos${infos_file_prefix}.md")) ?>
+  	</div>
 	</div>
 	<div id="right" class="col">
 		<h2>Compositions</h2>
